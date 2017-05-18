@@ -15,6 +15,19 @@
 		69BB0B2A1ECA91480092A5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BB0B281ECA91480092A5AB /* LaunchScreen.storyboard */; };
 		69BB0B351ECA91480092A5AB /* MobileVSPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B341ECA91480092A5AB /* MobileVSPTests.m */; };
 		69BB0B401ECA91480092A5AB /* MobileVSPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B3F1ECA91480092A5AB /* MobileVSPUITests.m */; };
+		69BB0B4F1ECA93F40092A5AB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B4E1ECA93F40092A5AB /* SearchViewController.m */; };
+		69BB0B521ECAA1A10092A5AB /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B511ECAA1A10092A5AB /* SearchTableViewCell.m */; };
+		69BB0B551ECAD6B50092A5AB /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B541ECAD6B50092A5AB /* InfoTableViewCell.m */; };
+		69BB0B5B1ECB2CCA0092A5AB /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B5A1ECB2CCA0092A5AB /* SearchView.m */; };
+		69BB0B5F1ECBEE210092A5AB /* ApplyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B5E1ECBEE210092A5AB /* ApplyButton.m */; };
+		69BB0B691ECC1F6F0092A5AB /* AftersalesApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B681ECC1F6F0092A5AB /* AftersalesApplyViewController.m */; };
+		69BB0B6C1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B6B1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m */; };
+		69BB0B721ECC727D0092A5AB /* ProgressQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B711ECC727D0092A5AB /* ProgressQueryViewController.m */; };
+		69BB0B761ECC79850092A5AB /* StateButtonsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B751ECC79850092A5AB /* StateButtonsTableViewCell.m */; };
+		69BB0B791ECC7AB50092A5AB /* OrderIdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B781ECC7AB50092A5AB /* OrderIdTableViewCell.m */; };
+		69BB0B7C1ECC7AD50092A5AB /* OrderStateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B7B1ECC7AD50092A5AB /* OrderStateTableViewCell.m */; };
+		69BB0B7F1ECC7AF40092A5AB /* ProductInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B7E1ECC7AF40092A5AB /* ProductInfoTableViewCell.m */; };
+		69BB0B821ECD89D10092A5AB /* ButtonsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B811ECD89D10092A5AB /* ButtonsCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +64,32 @@
 		69BB0B3B1ECA91480092A5AB /* MobileVSPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileVSPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BB0B3F1ECA91480092A5AB /* MobileVSPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileVSPUITests.m; sourceTree = "<group>"; };
 		69BB0B411ECA91480092A5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69BB0B4D1ECA93F40092A5AB /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		69BB0B4E1ECA93F40092A5AB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		69BB0B501ECAA1A10092A5AB /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		69BB0B511ECAA1A10092A5AB /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		69BB0B531ECAD6B50092A5AB /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
+		69BB0B541ECAD6B50092A5AB /* InfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewCell.m; sourceTree = "<group>"; };
+		69BB0B591ECB2CCA0092A5AB /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		69BB0B5A1ECB2CCA0092A5AB /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		69BB0B5D1ECBEE210092A5AB /* ApplyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyButton.h; sourceTree = "<group>"; };
+		69BB0B5E1ECBEE210092A5AB /* ApplyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyButton.m; sourceTree = "<group>"; };
+		69BB0B671ECC1F6F0092A5AB /* AftersalesApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AftersalesApplyViewController.h; sourceTree = "<group>"; };
+		69BB0B681ECC1F6F0092A5AB /* AftersalesApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AftersalesApplyViewController.m; sourceTree = "<group>"; };
+		69BB0B6A1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceTypeTableViewCell.h; sourceTree = "<group>"; };
+		69BB0B6B1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceTypeTableViewCell.m; sourceTree = "<group>"; };
+		69BB0B701ECC727D0092A5AB /* ProgressQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressQueryViewController.h; sourceTree = "<group>"; };
+		69BB0B711ECC727D0092A5AB /* ProgressQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressQueryViewController.m; sourceTree = "<group>"; };
+		69BB0B741ECC79850092A5AB /* StateButtonsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateButtonsTableViewCell.h; sourceTree = "<group>"; };
+		69BB0B751ECC79850092A5AB /* StateButtonsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateButtonsTableViewCell.m; sourceTree = "<group>"; };
+		69BB0B771ECC7AB50092A5AB /* OrderIdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderIdTableViewCell.h; sourceTree = "<group>"; };
+		69BB0B781ECC7AB50092A5AB /* OrderIdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderIdTableViewCell.m; sourceTree = "<group>"; };
+		69BB0B7A1ECC7AD50092A5AB /* OrderStateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderStateTableViewCell.h; sourceTree = "<group>"; };
+		69BB0B7B1ECC7AD50092A5AB /* OrderStateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderStateTableViewCell.m; sourceTree = "<group>"; };
+		69BB0B7D1ECC7AF40092A5AB /* ProductInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInfoTableViewCell.h; sourceTree = "<group>"; };
+		69BB0B7E1ECC7AF40092A5AB /* ProductInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInfoTableViewCell.m; sourceTree = "<group>"; };
+		69BB0B801ECD89D10092A5AB /* ButtonsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsCollectionViewCell.h; sourceTree = "<group>"; };
+		69BB0B811ECD89D10092A5AB /* ButtonsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +144,8 @@
 				69BB0B1E1ECA91470092A5AB /* AppDelegate.m */,
 				69BB0B201ECA91470092A5AB /* ViewController.h */,
 				69BB0B211ECA91470092A5AB /* ViewController.m */,
+				69BB0B611ECBFA630092A5AB /* ViewControllers */,
+				69BB0B601ECBFA440092A5AB /* Views */,
 				69BB0B231ECA91480092A5AB /* Main.storyboard */,
 				69BB0B261ECA91480092A5AB /* Assets.xcassets */,
 				69BB0B281ECA91480092A5AB /* LaunchScreen.storyboard */,
@@ -138,6 +179,70 @@
 				69BB0B411ECA91480092A5AB /* Info.plist */,
 			);
 			path = MobileVSPUITests;
+			sourceTree = "<group>";
+		};
+		69BB0B5C1ECBEDDA0092A5AB /* Search Views */ = {
+			isa = PBXGroup;
+			children = (
+				69BB0B501ECAA1A10092A5AB /* SearchTableViewCell.h */,
+				69BB0B511ECAA1A10092A5AB /* SearchTableViewCell.m */,
+				69BB0B531ECAD6B50092A5AB /* InfoTableViewCell.h */,
+				69BB0B541ECAD6B50092A5AB /* InfoTableViewCell.m */,
+				69BB0B591ECB2CCA0092A5AB /* SearchView.h */,
+				69BB0B5A1ECB2CCA0092A5AB /* SearchView.m */,
+				69BB0B5D1ECBEE210092A5AB /* ApplyButton.h */,
+				69BB0B5E1ECBEE210092A5AB /* ApplyButton.m */,
+			);
+			name = "Search Views";
+			sourceTree = "<group>";
+		};
+		69BB0B601ECBFA440092A5AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69BB0B731ECC79220092A5AB /* ProgressQueryViews */,
+				69BB0B661ECC1F210092A5AB /* AftersalesApplyViews */,
+				69BB0B5C1ECBEDDA0092A5AB /* Search Views */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		69BB0B611ECBFA630092A5AB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				69BB0B4D1ECA93F40092A5AB /* SearchViewController.h */,
+				69BB0B4E1ECA93F40092A5AB /* SearchViewController.m */,
+				69BB0B671ECC1F6F0092A5AB /* AftersalesApplyViewController.h */,
+				69BB0B681ECC1F6F0092A5AB /* AftersalesApplyViewController.m */,
+				69BB0B701ECC727D0092A5AB /* ProgressQueryViewController.h */,
+				69BB0B711ECC727D0092A5AB /* ProgressQueryViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		69BB0B661ECC1F210092A5AB /* AftersalesApplyViews */ = {
+			isa = PBXGroup;
+			children = (
+				69BB0B6A1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.h */,
+				69BB0B6B1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m */,
+			);
+			name = AftersalesApplyViews;
+			sourceTree = "<group>";
+		};
+		69BB0B731ECC79220092A5AB /* ProgressQueryViews */ = {
+			isa = PBXGroup;
+			children = (
+				69BB0B771ECC7AB50092A5AB /* OrderIdTableViewCell.h */,
+				69BB0B781ECC7AB50092A5AB /* OrderIdTableViewCell.m */,
+				69BB0B7A1ECC7AD50092A5AB /* OrderStateTableViewCell.h */,
+				69BB0B7B1ECC7AD50092A5AB /* OrderStateTableViewCell.m */,
+				69BB0B7D1ECC7AF40092A5AB /* ProductInfoTableViewCell.h */,
+				69BB0B7E1ECC7AF40092A5AB /* ProductInfoTableViewCell.m */,
+				69BB0B741ECC79850092A5AB /* StateButtonsTableViewCell.h */,
+				69BB0B751ECC79850092A5AB /* StateButtonsTableViewCell.m */,
+				69BB0B801ECD89D10092A5AB /* ButtonsCollectionViewCell.h */,
+				69BB0B811ECD89D10092A5AB /* ButtonsCollectionViewCell.m */,
+			);
+			name = ProgressQueryViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +382,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BB0B221ECA91470092A5AB /* ViewController.m in Sources */,
+				69BB0B791ECC7AB50092A5AB /* OrderIdTableViewCell.m in Sources */,
+				69BB0B691ECC1F6F0092A5AB /* AftersalesApplyViewController.m in Sources */,
+				69BB0B721ECC727D0092A5AB /* ProgressQueryViewController.m in Sources */,
 				69BB0B1F1ECA91470092A5AB /* AppDelegate.m in Sources */,
+				69BB0B5F1ECBEE210092A5AB /* ApplyButton.m in Sources */,
+				69BB0B761ECC79850092A5AB /* StateButtonsTableViewCell.m in Sources */,
+				69BB0B4F1ECA93F40092A5AB /* SearchViewController.m in Sources */,
+				69BB0B7F1ECC7AF40092A5AB /* ProductInfoTableViewCell.m in Sources */,
+				69BB0B7C1ECC7AD50092A5AB /* OrderStateTableViewCell.m in Sources */,
+				69BB0B6C1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m in Sources */,
+				69BB0B5B1ECB2CCA0092A5AB /* SearchView.m in Sources */,
+				69BB0B821ECD89D10092A5AB /* ButtonsCollectionViewCell.m in Sources */,
+				69BB0B551ECAD6B50092A5AB /* InfoTableViewCell.m in Sources */,
 				69BB0B1C1ECA91470092A5AB /* main.m in Sources */,
+				69BB0B521ECAA1A10092A5AB /* SearchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +636,7 @@
 				69BB0B461ECA91480092A5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69BB0B471ECA91480092A5AB /* Build configuration list for PBXNativeTarget "MobileVSPTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +645,7 @@
 				69BB0B491ECA91480092A5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69BB0B4A1ECA91480092A5AB /* Build configuration list for PBXNativeTarget "MobileVSPUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +654,7 @@
 				69BB0B4C1ECA91480092A5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
