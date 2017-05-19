@@ -12,9 +12,11 @@
 #import "ProductInfoTableViewCell.h"
 #import "StateButtonsTableViewCell.h"
 #import "ButtonsCollectionViewCell.h"
+#import "ButtonsCollectionViewLayout.h"
 
-@interface ProgressQueryViewController ()<UITableViewDelegate,UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ProgressQueryViewController ()<UITableViewDelegate,UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, ButtonsCollectionViewLayoutDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+//@property (weak, nonatomic) IBOutlet ButtonsCollectionViewLayout *buttonsCollectionViewLayout;
 
 @end
 
@@ -25,7 +27,7 @@
     // Do any additional setup after loading the view.
     
     // Mock the buttons array data
-    NSArray *buttonsArray = @[@"取消申请", @"更改订单", @"进度查询", @"取消申请", @"取消申请", @"更改订单", @"进度查询", @"取消申请"];
+    NSArray *buttonsArray = @[@"取消申请", @"更改订单", @"进度查询"];//, @"取消申请", @"取消申请", @"更改订单", @"进度查询", @"取消申请"];
     self.buttonsArray = [NSMutableArray arrayWithArray:buttonsArray];
     
     // Mock the table view data
@@ -47,17 +49,19 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
-    [self configureStateButtons];
-}
-
-- (void)configureStateButtons {
-    
+//    self.buttonsCollectionViewLayout.layoutDelegete = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
+}
+
+#pragma mark - ButtonsCollectionViewLayout Delegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView collectionViewLayout:(ButtonsCollectionViewLayout *)collectionViewLayout sizeOfItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(75, 30);
 }
 
 #pragma mark - UICollection Delegate
@@ -67,7 +71,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellReuseIdentifier = @"buttonsCollectionCell";
     ButtonsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellReuseIdentifier forIndexPath:indexPath];
+    
     [cell.button setTitle:self.buttonsArray[indexPath.row] forState:UIControlStateNormal];
+    
     // Set radius
     [cell.button.layer setCornerRadius:2];
     cell.button.layer.masksToBounds = YES;

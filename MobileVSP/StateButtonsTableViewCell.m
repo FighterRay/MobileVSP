@@ -32,6 +32,11 @@
     [self.collectionView reloadData];
 }
 
+- (void)setButtonsCollectionViewLayoutDelegate:(id<ButtonsCollectionViewLayoutDelegate>)delegate {
+    self.buttonsCollectionViewLayout.layoutDelegete = delegate;
+    [self.collectionView reloadData];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

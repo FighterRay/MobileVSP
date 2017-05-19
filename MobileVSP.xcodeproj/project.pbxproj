@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694C092E1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 694C092D1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m */; };
 		69BB0B1C1ECA91470092A5AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B1B1ECA91470092A5AB /* main.m */; };
 		69BB0B1F1ECA91470092A5AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B1E1ECA91470092A5AB /* AppDelegate.m */; };
 		69BB0B221ECA91470092A5AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B211ECA91470092A5AB /* ViewController.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		694C092C1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsCollectionViewLayout.h; sourceTree = "<group>"; };
+		694C092D1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsCollectionViewLayout.m; sourceTree = "<group>"; };
 		69BB0B171ECA91470092A5AB /* MobileVSP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileVSP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BB0B1B1ECA91470092A5AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69BB0B1D1ECA91470092A5AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				69BB0B751ECC79850092A5AB /* StateButtonsTableViewCell.m */,
 				69BB0B801ECD89D10092A5AB /* ButtonsCollectionViewCell.h */,
 				69BB0B811ECD89D10092A5AB /* ButtonsCollectionViewCell.m */,
+				694C092C1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.h */,
+				694C092D1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m */,
 			);
 			name = ProgressQueryViews;
 			sourceTree = "<group>";
@@ -312,7 +317,7 @@
 				TargetAttributes = {
 					69BB0B161ECA91470092A5AB = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = HPM8HVK7C6;
+						DevelopmentTeam = 777RZL5E43;
 						ProvisioningStyle = Automatic;
 					};
 					69BB0B2F1ECA91480092A5AB = {
@@ -391,6 +396,7 @@
 				69BB0B4F1ECA93F40092A5AB /* SearchViewController.m in Sources */,
 				69BB0B7F1ECC7AF40092A5AB /* ProductInfoTableViewCell.m in Sources */,
 				69BB0B7C1ECC7AD50092A5AB /* OrderStateTableViewCell.m in Sources */,
+				694C092E1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m in Sources */,
 				69BB0B6C1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m in Sources */,
 				69BB0B5B1ECB2CCA0092A5AB /* SearchView.m in Sources */,
 				69BB0B821ECD89D10092A5AB /* ButtonsCollectionViewCell.m in Sources */,
@@ -547,7 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HPM8HVK7C6;
+				DEVELOPMENT_TEAM = 777RZL5E43;
 				INFOPLIST_FILE = MobileVSP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ml.fighterray.MobileVSP;
@@ -559,7 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HPM8HVK7C6;
+				DEVELOPMENT_TEAM = 777RZL5E43;
 				INFOPLIST_FILE = MobileVSP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ml.fighterray.MobileVSP;

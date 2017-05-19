@@ -27,6 +27,8 @@
     UIImage *img = [UIImage imageNamed:@"search"];
     UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
     imgView.frame = CGRectMake(5, 10, 30, 30);
+    [imgView.layer setCornerRadius:5];
+    [imgView.layer setMasksToBounds:YES];
     self.leftView = imgView;
     self.leftViewMode = UITextFieldViewModeAlways;
 }
