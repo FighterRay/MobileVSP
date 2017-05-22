@@ -64,9 +64,9 @@
     return CGSizeMake(75, 30);
 }
 
-#pragma mark - UICollection Delegate
+#pragma mark - Collection Delegate
 
-#pragma mark - UICollectionViewDataSource
+#pragma mark - CollectionView Data Source
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellReuseIdentifier = @"buttonsCollectionCell";
@@ -89,7 +89,7 @@
     return [self.buttonsArray count];
 }
 
-#pragma mark - UITableView Delegate
+#pragma mark - TableView Delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
@@ -115,7 +115,7 @@
     return 10;
 }
 
-#pragma mark - UITableView DataSource
+#pragma mark - TableView DataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.data count];

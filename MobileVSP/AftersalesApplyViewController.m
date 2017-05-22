@@ -8,6 +8,8 @@
 
 #import "AftersalesApplyViewController.h"
 #import "ServiceTypeTableViewCell.h"
+#import "PhotoCollectionViewCell.h"
+#import "AddButtonCollectionViewCell.h"
 
 #define kMainColor [UIColor colorWithRed:232/255.0 green:108/255.0 blue:82/255.0 alpha:1]
 
@@ -16,8 +18,10 @@ typedef NS_ENUM(NSUInteger, AftersalesApplyTableCellType) {
     AftersalesApplyTableCellTypeServiceType = 1
 };
 
-@interface AftersalesApplyViewController ()
+@interface AftersalesApplyViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *serviceTypeScrollView;
+@property (strong, nonatomic) UIView *backgroundView;
+@property (strong, nonatomic) UIImageView *showImgView;
 
 @end
 
@@ -35,7 +39,19 @@ typedef NS_ENUM(NSUInteger, AftersalesApplyTableCellType) {
     NSArray *buttonArray = @[@"换货", @"维修", @"退货", @"换货", @"维修", @"退货"];
     self.buttonsArray = [NSMutableArray arrayWithArray:buttonArray];
     
+    NSArray *photoArray = @[];
+    self.photoArray = [NSMutableArray arrayWithArray:photoArray];
+    
     [self configureServiceTypeCell];
+    
+    CGRect screenFrame = UIScreen.mainScreen.bounds;
+    self.backgroundView = [[UIView alloc] initWithFrame:screenFrame];
+    self.backgroundView.backgroundColor = [UIColor grayColor];
+    self.backgroundView.alpha = 0.5;
+    self.backgroundView.userInteractionEnabled = YES;
+
+    self.showImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 150, screenFrame.size.width, screenFrame.size.width)];
+    self.showImgView.userInteractionEnabled = YES;
 }
 
 - (void)configureServiceTypeCell {
@@ -73,6 +89,77 @@ typedef NS_ENUM(NSUInteger, AftersalesApplyTableCellType) {
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Collection view data source
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *photoCollectionCellReuseId = @"photoCollectionViewCell";
+    static NSString *addButtonCollectionCellReuseId = @"addButtonCollectionViewCell";
+    if (indexPath.row == [self.photoArray count]) {
+        AddButtonCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:addButtonCollectionCellReuseId forIndexPath:indexPath];
+        cell.fetchPhotoBlock = ^() {
+            UIImagePickerController *imgPickerVC = [[UIImagePickerController alloc] init];
+            imgPickerVC.allowsEditing = YES;
+            imgPickerVC.delegate = self;
+            [self presentViewController:imgPickerVC animated:YES completion:nil];
+        };
+        return cell;
+    } else {
+        PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:photoCollectionCellReuseId forIndexPath:indexPath];
+        cell.photoImageView.image = self.photoArray[indexPath.row];
+        cell.deletePhotoBlock = ^(){
+            [self.photoArray removeObjectAtIndex:indexPath.row];
+            [self.photoCollectionView reloadData];
+            [self.tableView reloadData];
+        };
+        cell.showPhotoBlock = ^() {
+            UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+            [keyWindow addSubview:self.backgroundView];
+            
+            self.showImgView.image = self.photoArray[indexPath.row];
+            [keyWindow addSubview:self.showImgView];
+            
+            UITapGestureRecognizer *gestureReconizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissPhoto)];
+            [self.backgroundView addGestureRecognizer:gestureReconizer];
+        };
+        return cell;
+    }
+}
+
+- (void)dismissPhoto {
+    [self.backgroundView removeFromSuperview];
+    [self.showImgView removeFromSuperview];
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [self.photoArray count] + 1;
+}
+
+#pragma mark - ImagePickerController delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo {
+    [self.photoArray addObject:image];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.photoCollectionView reloadData];
+        [self.tableView reloadData];
+    }];
+}
+
+#pragma mark - Table view delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 10) {
+        return 145 + [self.photoArray count]/6 * (50 + 10);
+    } else if (indexPath.row == 2 || indexPath.row == 4 || indexPath.row == 6) {
+        return 96;
+    } else if (indexPath.row == 0) {
+        return 100;
+    } else if (indexPath.row == 8) {
+        return 145;
+    } else {
+        return 14;
+    }
 }
 
 #pragma mark - Table view data source

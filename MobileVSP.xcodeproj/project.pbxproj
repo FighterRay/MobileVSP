@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69225F1E1ED28DCE004AD51F /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69225F1D1ED28DCE004AD51F /* PhotoCollectionViewCell.m */; };
+		69225F211ED28EC3004AD51F /* AddButtonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69225F201ED28EC3004AD51F /* AddButtonCollectionViewCell.m */; };
 		694C092E1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 694C092D1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m */; };
 		69BB0B1C1ECA91470092A5AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B1B1ECA91470092A5AB /* main.m */; };
 		69BB0B1F1ECA91470092A5AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B1E1ECA91470092A5AB /* AppDelegate.m */; };
@@ -49,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69225F1C1ED28DCE004AD51F /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		69225F1D1ED28DCE004AD51F /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		69225F1F1ED28EC3004AD51F /* AddButtonCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddButtonCollectionViewCell.h; sourceTree = "<group>"; };
+		69225F201ED28EC3004AD51F /* AddButtonCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddButtonCollectionViewCell.m; sourceTree = "<group>"; };
 		694C092C1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsCollectionViewLayout.h; sourceTree = "<group>"; };
 		694C092D1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsCollectionViewLayout.m; sourceTree = "<group>"; };
 		69BB0B171ECA91470092A5AB /* MobileVSP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileVSP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +233,10 @@
 			children = (
 				69BB0B6A1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.h */,
 				69BB0B6B1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m */,
+				69225F1C1ED28DCE004AD51F /* PhotoCollectionViewCell.h */,
+				69225F1D1ED28DCE004AD51F /* PhotoCollectionViewCell.m */,
+				69225F1F1ED28EC3004AD51F /* AddButtonCollectionViewCell.h */,
+				69225F201ED28EC3004AD51F /* AddButtonCollectionViewCell.m */,
 			);
 			name = AftersalesApplyViews;
 			sourceTree = "<group>";
@@ -387,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BB0B221ECA91470092A5AB /* ViewController.m in Sources */,
+				69225F1E1ED28DCE004AD51F /* PhotoCollectionViewCell.m in Sources */,
 				69BB0B791ECC7AB50092A5AB /* OrderIdTableViewCell.m in Sources */,
 				69BB0B691ECC1F6F0092A5AB /* AftersalesApplyViewController.m in Sources */,
 				69BB0B721ECC727D0092A5AB /* ProgressQueryViewController.m in Sources */,
@@ -403,6 +414,7 @@
 				69BB0B551ECAD6B50092A5AB /* InfoTableViewCell.m in Sources */,
 				69BB0B1C1ECA91470092A5AB /* main.m in Sources */,
 				69BB0B521ECAA1A10092A5AB /* SearchTableViewCell.m in Sources */,
+				69225F211ED28EC3004AD51F /* AddButtonCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
