@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoPickerCollectionView.h"
 
 @interface AftersalesApplyViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *buttonsArray;
 @property (strong, nonatomic) NSMutableArray *photoArray;
-@property (weak, nonatomic) IBOutlet UICollectionView *photoCollectionView;
+@property (weak, nonatomic) IBOutlet PhotoPickerCollectionView *photoPickerCollectionView;
 
 @end

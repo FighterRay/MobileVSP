@@ -31,6 +31,8 @@
 		69BB0B7C1ECC7AD50092A5AB /* OrderStateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B7B1ECC7AD50092A5AB /* OrderStateTableViewCell.m */; };
 		69BB0B7F1ECC7AF40092A5AB /* ProductInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B7E1ECC7AF40092A5AB /* ProductInfoTableViewCell.m */; };
 		69BB0B821ECD89D10092A5AB /* ButtonsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B811ECD89D10092A5AB /* ButtonsCollectionViewCell.m */; };
+		69BDBEE21ED3C67B001EDB87 /* PhotoPickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBEE11ED3C67B001EDB87 /* PhotoPickerCollectionView.m */; };
+		69BDBEEB1ED3D018001EDB87 /* PhotoPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBEEA1ED3D018001EDB87 /* PhotoPickerTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,10 @@
 		69BB0B7E1ECC7AF40092A5AB /* ProductInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInfoTableViewCell.m; sourceTree = "<group>"; };
 		69BB0B801ECD89D10092A5AB /* ButtonsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsCollectionViewCell.h; sourceTree = "<group>"; };
 		69BB0B811ECD89D10092A5AB /* ButtonsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsCollectionViewCell.m; sourceTree = "<group>"; };
+		69BDBEE01ED3C67B001EDB87 /* PhotoPickerCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerCollectionView.h; sourceTree = "<group>"; };
+		69BDBEE11ED3C67B001EDB87 /* PhotoPickerCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerCollectionView.m; sourceTree = "<group>"; };
+		69BDBEE91ED3D018001EDB87 /* PhotoPickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerTableViewCell.h; sourceTree = "<group>"; };
+		69BDBEEA1ED3D018001EDB87 /* PhotoPickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,12 +237,8 @@
 		69BB0B661ECC1F210092A5AB /* AftersalesApplyViews */ = {
 			isa = PBXGroup;
 			children = (
-				69BB0B6A1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.h */,
-				69BB0B6B1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m */,
-				69225F1C1ED28DCE004AD51F /* PhotoCollectionViewCell.h */,
-				69225F1D1ED28DCE004AD51F /* PhotoCollectionViewCell.m */,
-				69225F1F1ED28EC3004AD51F /* AddButtonCollectionViewCell.h */,
-				69225F201ED28EC3004AD51F /* AddButtonCollectionViewCell.m */,
+				69BDBEE31ED3CB24001EDB87 /* TableViewCell */,
+				69BDBEE51ED3CB40001EDB87 /* CollectionViewCell */,
 			);
 			name = AftersalesApplyViews;
 			sourceTree = "<group>";
@@ -258,6 +260,30 @@
 				694C092D1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m */,
 			);
 			name = ProgressQueryViews;
+			sourceTree = "<group>";
+		};
+		69BDBEE31ED3CB24001EDB87 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				69BB0B6A1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.h */,
+				69BB0B6B1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m */,
+				69BDBEE91ED3D018001EDB87 /* PhotoPickerTableViewCell.h */,
+				69BDBEEA1ED3D018001EDB87 /* PhotoPickerTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		69BDBEE51ED3CB40001EDB87 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				69225F1C1ED28DCE004AD51F /* PhotoCollectionViewCell.h */,
+				69225F1D1ED28DCE004AD51F /* PhotoCollectionViewCell.m */,
+				69225F1F1ED28EC3004AD51F /* AddButtonCollectionViewCell.h */,
+				69225F201ED28EC3004AD51F /* AddButtonCollectionViewCell.m */,
+				69BDBEE01ED3C67B001EDB87 /* PhotoPickerCollectionView.h */,
+				69BDBEE11ED3C67B001EDB87 /* PhotoPickerCollectionView.m */,
+			);
+			name = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BB0B221ECA91470092A5AB /* ViewController.m in Sources */,
+				69BDBEE21ED3C67B001EDB87 /* PhotoPickerCollectionView.m in Sources */,
 				69225F1E1ED28DCE004AD51F /* PhotoCollectionViewCell.m in Sources */,
 				69BB0B791ECC7AB50092A5AB /* OrderIdTableViewCell.m in Sources */,
 				69BB0B691ECC1F6F0092A5AB /* AftersalesApplyViewController.m in Sources */,
@@ -412,6 +439,7 @@
 				69BB0B5B1ECB2CCA0092A5AB /* SearchView.m in Sources */,
 				69BB0B821ECD89D10092A5AB /* ButtonsCollectionViewCell.m in Sources */,
 				69BB0B551ECAD6B50092A5AB /* InfoTableViewCell.m in Sources */,
+				69BDBEEB1ED3D018001EDB87 /* PhotoPickerTableViewCell.m in Sources */,
 				69BB0B1C1ECA91470092A5AB /* main.m in Sources */,
 				69BB0B521ECAA1A10092A5AB /* SearchTableViewCell.m in Sources */,
 				69225F211ED28EC3004AD51F /* AddButtonCollectionViewCell.m in Sources */,
