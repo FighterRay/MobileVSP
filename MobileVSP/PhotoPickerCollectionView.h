@@ -21,9 +21,9 @@ typedef void(^PickBlock)();
 typedef void(^CompletionBlock)();
 
 @interface PhotoPickerCollectionView : UICollectionView <UICollectionViewDelegate, UICollectionViewDataSource>
-@property (weak, nonatomic) UIViewController *viewController;
+
 @property (strong, nonatomic) NSArray *photoArray;
-@property (assign, nonatomic) PickBlock pickBlock;
+
 @property (assign, nonatomic) CompletionBlock deleteCompletionBlock;
 @property (assign, nonatomic) CompletionBlock showPhotoCompletionBlock;
 @property (strong, nonatomic) UIImageView *showImgView;
