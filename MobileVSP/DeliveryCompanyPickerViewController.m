@@ -10,7 +10,9 @@
 #import "DeliveryCompanyPickerCollectionViewCell.h"
 
 @interface DeliveryCompanyPickerViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
-
+@property (weak, nonatomic) IBOutlet UITextField *otherTextField;
+@property (strong, nonatomic) UIColor *buttonColor;
+@property (strong, nonatomic) NSIndexPath *organgIndexPath;
 @end
 
 @implementation DeliveryCompanyPickerViewController
@@ -23,6 +25,9 @@
                       @"优速快递", @"德邦快递", @"国通快递", @"权益快递",
                       @"苏通快递", @"青岛快递", @"如风达", @"其他"];
     self.data = [NSMutableArray arrayWithArray:data];
+    
+    self.otherTextField.hidden = YES;
+    self.buttonColor = [UIColor colorWithRed:104/255 green:104/255 blue:104/255 alpha:1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,15 +49,35 @@
     cell.pickerButton.layer.masksToBounds = YES;
     
     // Set border
-    [cell.pickerButton.layer setBorderColor:[UIColor grayColor].CGColor];
+    [cell.pickerButton.layer setBorderColor:self.buttonColor.CGColor];
     [cell.pickerButton.layer setBorderWidth:1.0];
     
     [cell.pickerButton setTitle: self.data[indexPath.row] forState: UIControlStateNormal];
-
+    [cell.pickerButton setTitleColor:self.buttonColor forState:UIControlStateNormal];
     return cell;
 }
 
 #pragma mark - UICollectionView Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger row = indexPath.row;
+    DeliveryCompanyPickerCollectionViewCell *presentCell = (DeliveryCompanyPickerCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    DeliveryCompanyPickerCollectionViewCell *lastCell = (DeliveryCompanyPickerCollectionViewCell *)[collectionView cellForItemAtIndexPath:self.organgIndexPath];
+    
+    [lastCell.pickerButton setTitleColor:self.buttonColor forState:UIControlStateNormal];
+    [lastCell.pickerButton.layer setBorderColor:self.buttonColor.CGColor];
+    [presentCell.pickerButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [presentCell.pickerButton.layer setBorderColor:[UIColor orangeColor].CGColor];
+    
+    self.organgIndexPath = indexPath;
+    
+    if (row == [self.data count] - 1) {
+        self.otherTextField.hidden = NO;
+
+    } else {
+        self.otherTextField.hidden = YES;
+    }
+}
 
 /*
 #pragma mark - Navigation

@@ -14,7 +14,6 @@
 		69BB0B1F1ECA91470092A5AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B1E1ECA91470092A5AB /* AppDelegate.m */; };
 		69BB0B221ECA91470092A5AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B211ECA91470092A5AB /* ViewController.m */; };
 		69BB0B251ECA91480092A5AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BB0B231ECA91480092A5AB /* Main.storyboard */; };
-		69BB0B271ECA91480092A5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BB0B261ECA91480092A5AB /* Assets.xcassets */; };
 		69BB0B2A1ECA91480092A5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BB0B281ECA91480092A5AB /* LaunchScreen.storyboard */; };
 		69BB0B351ECA91480092A5AB /* MobileVSPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B341ECA91480092A5AB /* MobileVSPTests.m */; };
 		69BB0B401ECA91480092A5AB /* MobileVSPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BB0B3F1ECA91480092A5AB /* MobileVSPUITests.m */; };
@@ -40,6 +39,10 @@
 		69BDBF001ED56B8A001EDB87 /* WriteShipOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBEFF1ED56B8A001EDB87 /* WriteShipOrderTableViewCell.m */; };
 		69BDBF031ED5729C001EDB87 /* DeliveryCompanyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBF021ED5729C001EDB87 /* DeliveryCompanyPickerViewController.m */; };
 		69BDBF0B1ED5808D001EDB87 /* DeliveryCompanyPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBF0A1ED5808D001EDB87 /* DeliveryCompanyPickerCollectionViewCell.m */; };
+		69BDBF0E1ED67EC4001EDB87 /* UICollectionView+IndexPathInTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBF0D1ED67EC4001EDB87 /* UICollectionView+IndexPathInTableView.m */; };
+		69BDBF151ED6AA2F001EDB87 /* HubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBF141ED6AA2F001EDB87 /* HubView.m */; };
+		69BDBF1A1ED6C508001EDB87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BDBF181ED6C508001EDB87 /* Assets.xcassets */; };
+		69BDBF201ED6CBEE001EDB87 /* OrderDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBF1F1ED6CBEE001EDB87 /* OrderDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +76,6 @@
 		69BB0B201ECA91470092A5AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		69BB0B211ECA91470092A5AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		69BB0B241ECA91480092A5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		69BB0B261ECA91480092A5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69BB0B291ECA91480092A5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69BB0B2B1ECA91480092A5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69BB0B301ECA91480092A5AB /* MobileVSPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileVSPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,13 @@
 		69BDBF021ED5729C001EDB87 /* DeliveryCompanyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryCompanyPickerViewController.m; sourceTree = "<group>"; };
 		69BDBF091ED5808D001EDB87 /* DeliveryCompanyPickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryCompanyPickerCollectionViewCell.h; sourceTree = "<group>"; };
 		69BDBF0A1ED5808D001EDB87 /* DeliveryCompanyPickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryCompanyPickerCollectionViewCell.m; sourceTree = "<group>"; };
+		69BDBF0C1ED67EC4001EDB87 /* UICollectionView+IndexPathInTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+IndexPathInTableView.h"; sourceTree = "<group>"; };
+		69BDBF0D1ED67EC4001EDB87 /* UICollectionView+IndexPathInTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+IndexPathInTableView.m"; sourceTree = "<group>"; };
+		69BDBF131ED6AA2F001EDB87 /* HubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubView.h; sourceTree = "<group>"; };
+		69BDBF141ED6AA2F001EDB87 /* HubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HubView.m; sourceTree = "<group>"; };
+		69BDBF191ED6C508001EDB87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Base; path = Base.lproj/Assets.xcassets; sourceTree = "<group>"; };
+		69BDBF1E1ED6CBEE001EDB87 /* OrderDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailTableViewController.h; sourceTree = "<group>"; };
+		69BDBF1F1ED6CBEE001EDB87 /* OrderDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,9 +191,10 @@
 				69BB0B211ECA91470092A5AB /* ViewController.m */,
 				69BB0B611ECBFA630092A5AB /* ViewControllers */,
 				69BB0B601ECBFA440092A5AB /* Views */,
+				69BDBF171ED6B89F001EDB87 /* Utils */,
 				69BB0B231ECA91480092A5AB /* Main.storyboard */,
-				69BB0B261ECA91480092A5AB /* Assets.xcassets */,
 				69BB0B281ECA91480092A5AB /* LaunchScreen.storyboard */,
+				69BDBF181ED6C508001EDB87 /* Assets.xcassets */,
 				69BB0B2B1ECA91480092A5AB /* Info.plist */,
 				69BB0B1A1ECA91470092A5AB /* Supporting Files */,
 			);
@@ -235,6 +245,7 @@
 		69BB0B601ECBFA440092A5AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				69BDBF121ED6A9FC001EDB87 /* Heads-up View */,
 				69BDBF081ED5805A001EDB87 /* DeliveryCompanyPickerViews */,
 				69BDBEFD1ED56B4B001EDB87 /* WriteShipOrderViews */,
 				69BDBEF61ED55F41001EDB87 /* AftersalesProgressViews */,
@@ -262,6 +273,8 @@
 				69BDBEFB1ED56A19001EDB87 /* WriteShipOrderViewController.m */,
 				69BDBF011ED5729C001EDB87 /* DeliveryCompanyPickerViewController.h */,
 				69BDBF021ED5729C001EDB87 /* DeliveryCompanyPickerViewController.m */,
+				69BDBF1E1ED6CBEE001EDB87 /* OrderDetailTableViewController.h */,
+				69BDBF1F1ED6CBEE001EDB87 /* OrderDetailTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -290,6 +303,8 @@
 				69BB0B811ECD89D10092A5AB /* ButtonsCollectionViewCell.m */,
 				694C092C1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.h */,
 				694C092D1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m */,
+				69BDBF0C1ED67EC4001EDB87 /* UICollectionView+IndexPathInTableView.h */,
+				69BDBF0D1ED67EC4001EDB87 /* UICollectionView+IndexPathInTableView.m */,
 			);
 			name = ProgressQueryViews;
 			sourceTree = "<group>";
@@ -343,6 +358,22 @@
 				69BDBF0A1ED5808D001EDB87 /* DeliveryCompanyPickerCollectionViewCell.m */,
 			);
 			name = DeliveryCompanyPickerViews;
+			sourceTree = "<group>";
+		};
+		69BDBF121ED6A9FC001EDB87 /* Heads-up View */ = {
+			isa = PBXGroup;
+			children = (
+				69BDBF131ED6AA2F001EDB87 /* HubView.h */,
+				69BDBF141ED6AA2F001EDB87 /* HubView.m */,
+			);
+			name = "Heads-up View";
+			sourceTree = "<group>";
+		};
+		69BDBF171ED6B89F001EDB87 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,7 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BB0B2A1ECA91480092A5AB /* LaunchScreen.storyboard in Resources */,
-				69BB0B271ECA91480092A5AB /* Assets.xcassets in Resources */,
+				69BDBF1A1ED6C508001EDB87 /* Assets.xcassets in Resources */,
 				69BB0B251ECA91480092A5AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,7 +526,9 @@
 				69BB0B761ECC79850092A5AB /* StateButtonsTableViewCell.m in Sources */,
 				69BB0B4F1ECA93F40092A5AB /* SearchViewController.m in Sources */,
 				69BB0B7F1ECC7AF40092A5AB /* ProductInfoTableViewCell.m in Sources */,
+				69BDBF151ED6AA2F001EDB87 /* HubView.m in Sources */,
 				69BB0B7C1ECC7AD50092A5AB /* OrderStateTableViewCell.m in Sources */,
+				69BDBF0E1ED67EC4001EDB87 /* UICollectionView+IndexPathInTableView.m in Sources */,
 				69BDBEFC1ED56A19001EDB87 /* WriteShipOrderViewController.m in Sources */,
 				694C092E1ECEC0DA0091B601 /* ButtonsCollectionViewLayout.m in Sources */,
 				69BDBEF91ED55FA9001EDB87 /* AftersalesProgressOrderStateTableViewCell.m in Sources */,
@@ -503,6 +536,7 @@
 				69BB0B6C1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m in Sources */,
 				69BDBEF11ED52FB9001EDB87 /* RefundDetailTableViewController.m in Sources */,
 				69BB0B5B1ECB2CCA0092A5AB /* SearchView.m in Sources */,
+				69BDBF201ED6CBEE001EDB87 /* OrderDetailTableViewController.m in Sources */,
 				69BB0B821ECD89D10092A5AB /* ButtonsCollectionViewCell.m in Sources */,
 				69BB0B551ECAD6B50092A5AB /* InfoTableViewCell.m in Sources */,
 				69BDBEEB1ED3D018001EDB87 /* PhotoPickerTableViewCell.m in Sources */,
@@ -558,6 +592,14 @@
 				69BB0B291ECA91480092A5AB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		69BDBF181ED6C508001EDB87 /* Assets.xcassets */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69BDBF191ED6C508001EDB87 /* Base */,
+			);
+			name = Assets.xcassets;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

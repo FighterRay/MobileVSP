@@ -8,8 +8,11 @@
 
 #import "WriteShipOrderViewController.h"
 #import "WriteShipOrderTableViewCell.h"
+#import "HubView.h"
 
 @interface WriteShipOrderViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) HubView *hubView;
 
 @end
 
@@ -27,7 +30,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.scrollEnabled = NO;  
+    self.tableView.scrollEnabled = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,6 +68,17 @@
     return cell;
 }
 
+- (IBAction)submit:(id)sender {
+    self.hubView = [HubView hubInView:self.navigationController.view anmiated:YES];
+    self.hubView.text = @"快递费用格式填写\n不正确且为正整数";
+    
+    [self performSelector:@selector(removeHubView) withObject:nil afterDelay:1.0];
+
+}
+
+- (void)removeHubView {
+    [self.hubView setHidden:YES];
+}
 
 /*
 #pragma mark - Navigation

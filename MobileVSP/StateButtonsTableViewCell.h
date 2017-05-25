@@ -10,6 +10,7 @@
 #import "ButtonsCollectionViewLayout.h"
 
 @interface StateButtonsTableViewCell : UITableViewCell<UICollectionViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet ButtonsCollectionViewLayout *buttonsCollectionViewLayout;
 

@@ -13,6 +13,7 @@
 #import "StateButtonsTableViewCell.h"
 #import "ButtonsCollectionViewCell.h"
 #import "ButtonsCollectionViewLayout.h"
+#import "UICollectionView+IndexPathInTableView.h"
 
 @interface ProgressQueryViewController ()<UITableViewDelegate,UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, ButtonsCollectionViewLayoutDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -27,7 +28,8 @@
     // Do any additional setup after loading the view.
     
     // Mock the buttons array data
-    NSArray *buttonsArray = @[@"取消申请", @"更改订单", @"进度查询"];//, @"取消申请", @"取消申请", @"更改订单", @"进度查询", @"取消申请"];
+    NSArray *buttonsArray = @[@[@"取消申请", @"更改订单", @"进度查询"],
+                              @[@"退款详情", @"进度查询"]];
     self.buttonsArray = [NSMutableArray arrayWithArray:buttonsArray];
     
     // Mock the table view data
@@ -66,13 +68,30 @@
 
 #pragma mark - Collection Delegate
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    ButtonsCollectionViewCell *cell = (ButtonsCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    NSString *buttonText = cell.button.titleLabel.text;
+    if ([buttonText isEqualToString:@"更改订单"]) {
+        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"WriteShipOrderViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if ([buttonText isEqualToString:@"进度查询"]) {
+        UITableViewController *vc = (UITableViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"AftersalesProgressTableViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if ([buttonText isEqualToString:@"退款详情"]) {
+        UITableViewController *vc = (UITableViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"RefundDetailTableViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
 #pragma mark - CollectionView Data Source
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellReuseIdentifier = @"buttonsCollectionCell";
     ButtonsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellReuseIdentifier forIndexPath:indexPath];
-    
-    [cell.button setTitle:self.buttonsArray[indexPath.row] forState:UIControlStateNormal];
+
+    NSInteger sectionInTableView = collectionView.indexPathInTableView.section;
+//    NSLog(@"%ld", (long)sectionInTableView);
+    [cell.button setTitle:self.buttonsArray[sectionInTableView][indexPath.row] forState:UIControlStateNormal];
     
     // Set radius
     [cell.button.layer setCornerRadius:2];
@@ -86,7 +105,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.buttonsArray count];
+    return [self.buttonsArray[section] count];
 }
 
 #pragma mark - TableView Delegate
@@ -159,16 +178,20 @@
         static NSString *stateButtonsCellReuseIdentifier = @"stateButtonCell";
         StateButtonsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:stateButtonsCellReuseIdentifier forIndexPath:indexPath];
         // Config the buttons
+        
         [cell setCollectionViewDataSourceDelegate:self];
+        cell.collectionView.indexPathInTableView = indexPath;
+        NSLog(@"indexPathInTableView -- %@", cell.collectionView.indexPathInTableView);
+        
         CGFloat space = 10.0;
         CGFloat buttonWidth = 75.0;
         CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-        CGFloat sumLength = (buttonWidth + space) * self.buttonsArray.count - space;
+        CGFloat sumLength = (buttonWidth + space) * [self.buttonsArray[indexPath.section] count] - space;
         if (sumLength <= screenWidth) {
             CGRect rect = CGRectMake(screenWidth - sumLength, 10, sumLength, 35);
             cell.collectionView.frame = rect;
         } else {
-            [cell.collectionView setContentOffset:CGPointMake( self.buttonsArray.count * (buttonWidth + space) + space, 0)];
+            [cell.collectionView setContentOffset:CGPointMake( [self.buttonsArray[indexPath.section] count] * (buttonWidth + space) + space, 0)];
         }
 
         return cell;
