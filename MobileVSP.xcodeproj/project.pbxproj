@@ -456,7 +456,7 @@
 				TargetAttributes = {
 					69BB0B161ECA91470092A5AB = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 777RZL5E43;
+						DevelopmentTeam = HPM8HVK7C6;
 						ProvisioningStyle = Automatic;
 					};
 					69BB0B2F1ECA91480092A5AB = {
@@ -715,7 +715,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 777RZL5E43;
+				DEVELOPMENT_TEAM = HPM8HVK7C6;
 				INFOPLIST_FILE = MobileVSP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ml.fighterray.MobileVSP;
@@ -727,7 +727,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 777RZL5E43;
+				DEVELOPMENT_TEAM = HPM8HVK7C6;
 				INFOPLIST_FILE = MobileVSP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ml.fighterray.MobileVSP;

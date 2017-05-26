@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^CompletionTextInputBlock)();
+
 @interface WriteShipOrderTableViewCell : UITableViewCell <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic, strong) CompletionTextInputBlock compeletionTextFieldBlock;
 
 @end

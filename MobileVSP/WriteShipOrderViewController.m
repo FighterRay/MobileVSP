@@ -77,6 +77,9 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textField.text = self.companyName;
     } else if (row == 2) {
+        cell.compeletionTextFieldBlock = ^{
+            [self.tableView reloadData];
+        };
         self.cost = [cell.textField.text mutableCopy];
     }
     

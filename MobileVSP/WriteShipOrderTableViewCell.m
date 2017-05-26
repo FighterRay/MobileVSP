@@ -25,6 +25,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.textField resignFirstResponder];
+    self.compeletionTextFieldBlock();
     return YES;
 }
 
