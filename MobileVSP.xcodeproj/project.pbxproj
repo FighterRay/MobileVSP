@@ -43,6 +43,7 @@
 		69BDBF151ED6AA2F001EDB87 /* HubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBF141ED6AA2F001EDB87 /* HubView.m */; };
 		69BDBF1A1ED6C508001EDB87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69BDBF181ED6C508001EDB87 /* Assets.xcassets */; };
 		69BDBF201ED6CBEE001EDB87 /* OrderDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BDBF1F1ED6CBEE001EDB87 /* OrderDetailTableViewController.m */; };
+		69F652811ED809D2009F02D2 /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F652801ED809D2009F02D2 /* SegmentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,8 @@
 		69BDBF191ED6C508001EDB87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Base; path = Base.lproj/Assets.xcassets; sourceTree = "<group>"; };
 		69BDBF1E1ED6CBEE001EDB87 /* OrderDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailTableViewController.h; sourceTree = "<group>"; };
 		69BDBF1F1ED6CBEE001EDB87 /* OrderDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailTableViewController.m; sourceTree = "<group>"; };
+		69F6527F1ED809D2009F02D2 /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
+		69F652801ED809D2009F02D2 /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +248,7 @@
 		69BB0B601ECBFA440092A5AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				69BDBF211ED7C17A001EDB87 /* SegmentView */,
 				69BDBF121ED6A9FC001EDB87 /* Heads-up View */,
 				69BDBF081ED5805A001EDB87 /* DeliveryCompanyPickerViews */,
 				69BDBEFD1ED56B4B001EDB87 /* WriteShipOrderViews */,
@@ -374,6 +378,15 @@
 			children = (
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		69BDBF211ED7C17A001EDB87 /* SegmentView */ = {
+			isa = PBXGroup;
+			children = (
+				69F6527F1ED809D2009F02D2 /* SegmentView.h */,
+				69F652801ED809D2009F02D2 /* SegmentView.m */,
+			);
+			name = SegmentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,6 +547,7 @@
 				69BDBEF91ED55FA9001EDB87 /* AftersalesProgressOrderStateTableViewCell.m in Sources */,
 				69BDBEF41ED54B08001EDB87 /* AftersalesProgressTableViewController.m in Sources */,
 				69BB0B6C1ECC1FCE0092A5AB /* ServiceTypeTableViewCell.m in Sources */,
+				69F652811ED809D2009F02D2 /* SegmentView.m in Sources */,
 				69BDBEF11ED52FB9001EDB87 /* RefundDetailTableViewController.m in Sources */,
 				69BB0B5B1ECB2CCA0092A5AB /* SearchView.m in Sources */,
 				69BDBF201ED6CBEE001EDB87 /* OrderDetailTableViewController.m in Sources */,

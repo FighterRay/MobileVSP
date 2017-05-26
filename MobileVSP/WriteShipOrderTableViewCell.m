@@ -21,4 +21,11 @@
     // Configure the view for the selected state
 }
 
+#pragma mark - TextField delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.textField resignFirstResponder];
+    return YES;
+}
+
 @end

@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *otherTextField;
 @property (strong, nonatomic) UIColor *buttonColor;
 @property (strong, nonatomic) NSIndexPath *organgIndexPath;
+@property (strong, nonatomic) NSString *selectedCompanyName;
+
 @end
 
 @implementation DeliveryCompanyPickerViewController
@@ -61,6 +63,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
+    
+    DeliveryCompanyPickerCollectionViewCell *cell = (DeliveryCompanyPickerCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    self.selectedCompanyName = cell.pickerButton.titleLabel.text;
+    
     DeliveryCompanyPickerCollectionViewCell *presentCell = (DeliveryCompanyPickerCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     DeliveryCompanyPickerCollectionViewCell *lastCell = (DeliveryCompanyPickerCollectionViewCell *)[collectionView cellForItemAtIndexPath:self.organgIndexPath];
     
@@ -73,11 +79,25 @@
     
     if (row == [self.data count] - 1) {
         self.otherTextField.hidden = NO;
-
+        self.selectedCompanyName = self.otherTextField.text;
     } else {
         self.otherTextField.hidden = YES;
     }
 }
+
+- (IBAction)back:(id)sender {
+    self.submitButton(self.selectedCompanyName);
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - TextField delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.otherTextField resignFirstResponder];
+    self.selectedCompanyName = self.otherTextField.text;
+    return YES;
+}
+
 
 /*
 #pragma mark - Navigation

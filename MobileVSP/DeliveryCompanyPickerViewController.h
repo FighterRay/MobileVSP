@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^SubmitButtonBlock)(NSString *companyName);
+
 @interface DeliveryCompanyPickerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UICollectionView *pickerCollectionView;
 @property (strong, nonatomic) NSMutableArray *data;
+@property (strong, nonatomic) SubmitButtonBlock submitButton;
 
 @end

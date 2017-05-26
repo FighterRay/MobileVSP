@@ -9,10 +9,13 @@
 #import "WriteShipOrderViewController.h"
 #import "WriteShipOrderTableViewCell.h"
 #import "HubView.h"
+#import "DeliveryCompanyPickerViewController.h"
 
-@interface WriteShipOrderViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface WriteShipOrderViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (strong, nonatomic) HubView *hubView;
+@property (strong, nonatomic) NSMutableString *companyName;
+@property (strong, nonatomic) NSMutableString *cost;
 
 @end
 
@@ -45,6 +48,12 @@
     return hieght;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 1) {
+        [self showDeliveryCompanyPickerViewController];
+    }
+}
+
 
 #pragma mark - Table view data source
 
@@ -61,18 +70,27 @@
     WriteShipOrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WriteShipOrderTableViewCell" forIndexPath:indexPath];
     cell.nameLabel.text = self.data[row][@"name"];
     cell.textField.placeholder = self.data[row][@"textFieldPlaceholder"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     if (row == 1) {
         cell.textField.enabled = NO;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textField.text = self.companyName;
+    } else if (row == 2) {
+        self.cost = [cell.textField.text mutableCopy];
     }
+    
     return cell;
 }
 
 - (IBAction)submit:(id)sender {
-    self.hubView = [HubView hubInView:self.navigationController.view anmiated:YES];
-    self.hubView.text = @"快递费用格式填写\n不正确且为正整数";
     
-    [self performSelector:@selector(removeHubView) withObject:nil afterDelay:1.0];
+    if (![self.cost isEqualToString:@""] && ![self isPureInt:self.cost]) {
+        self.hubView = [HubView hubInView:self.navigationController.view anmiated:YES];
+        self.hubView.text = @"快递费用格式填写\n不正确且为正整数";
+        
+        [self performSelector:@selector(removeHubView) withObject:nil afterDelay:1.0];
+    }
 
 }
 
@@ -80,14 +98,29 @@
     [self.hubView setHidden:YES];
 }
 
-/*
+- (void)showDeliveryCompanyPickerViewController {
+    [self performSegueWithIdentifier:@"showDeliveryCompanyPickerViewController" sender:nil];
+}
+
+- (BOOL)isPureInt:(NSString*)string{
+    NSScanner* scan = [NSScanner scannerWithString:string];
+    int val;
+    return [scan scanInt:&val] && [scan isAtEnd];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showDeliveryCompanyPickerViewController"]) {
+        DeliveryCompanyPickerViewController *vc = (DeliveryCompanyPickerViewController *)[segue destinationViewController];
+        vc.submitButton = ^(NSString *companyName) {
+            self.companyName = [companyName mutableCopy];
+            [self.tableView reloadData];
+        };
+    }
 }
-*/
 
 @end

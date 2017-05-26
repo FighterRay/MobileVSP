@@ -10,7 +10,10 @@
 #import "SearchTableViewCell.h"
 #import "InfoTableViewCell.h"
 
-@interface SearchViewController ()<UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+#import "AftersalesApplyViewController.h"
+#import "AppDelegate.h"
+
+@interface SearchViewController ()<UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @end
 
@@ -50,6 +53,7 @@
                      ];
     
     self.data = [[NSMutableArray alloc] initWithArray:data];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,18 +109,32 @@
         cell.productImageView.image = [UIImage imageNamed:rowData[@"productImageName"]];
         cell.productNameLabel.text = rowData[@"productName"];
         cell.numberLabel.text = rowData[@"number"];
+        [cell.applyButton addTarget:self action:@selector(showDetailAction) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 }
 
-/*
+- (void)showDetailAction {
+    
+    AftersalesApplyViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AftersalesApplyViewController"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+//    if ([segue.identifier isEqualToString:@"showDetailAction"]) {
+//       AftersalesApplyViewController *controller = [segue destinationViewController];
+//        
+//    }
+    
+    
 }
-*/
+
 
 @end

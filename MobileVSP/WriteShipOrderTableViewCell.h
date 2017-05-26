@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WriteShipOrderTableViewCell : UITableViewCell
+@interface WriteShipOrderTableViewCell : UITableViewCell <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
