@@ -36,9 +36,10 @@
 - (IBAction)goToAftersalesApplyVC:(id)sender {
     SearchViewController *searchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
     
+    __weak __typeof(self) weakSelf = self;
     [self.pageController setViewControllers:@[searchVC] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
         if (finished) {
-            [self changeToButton1];
+            [weakSelf changeToButton1];
         }
     }];
 }
@@ -46,9 +47,10 @@
 - (IBAction)goToProgressQueryVC:(id)sender {
     ProgressQueryViewController *progressQueryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProgressQueryViewController"];
     
+    __weak __typeof(self) weakSelf = self;
     [self.pageController setViewControllers:@[progressQueryVC] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
         if (finished) {
-            [self changeToButton2];
+            [weakSelf changeToButton2];
         }
     }];
 }
@@ -57,7 +59,7 @@
     [self.button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.button1 setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
         self.slider.frame = CGRectMake(50, 35, 108, 2);
     } completion:nil];
 }
@@ -66,7 +68,7 @@
     [self.button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.button2 setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
         self.slider.frame = CGRectMake(220, 35, 108, 2);
     } completion:nil];
 }

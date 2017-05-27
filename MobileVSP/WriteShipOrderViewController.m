@@ -72,6 +72,11 @@
     cell.textField.placeholder = self.data[row][@"textFieldPlaceholder"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
+    if (row == 0) {
+        cell.compeletionTextFieldBlock = ^{
+            
+        };
+    }
     if (row == 1) {
         cell.textField.enabled = NO;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
